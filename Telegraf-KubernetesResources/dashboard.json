@@ -134,7 +134,7 @@
             ],
             "measurement": "system",
             "policy": "default",
-            "query": "from(bucket: \"monitoring\")\r\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n  |> filter(fn: (r) =>\r\n    r._measurement == \"system\" and\r\n    r._field == \"uptime\"\r\n  )\r\n  |> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n  |> filter(fn: (r) =>\r\n    r._measurement == \"system\" and\r\n    r._field == \"uptime\"\r\n  )\r\n  |> aggregateWindow(every: 1m, fn: mean)",
             "refId": "A",
             "resultFormat": "time_series",
             "select": [
@@ -253,7 +253,7 @@
             ],
             "measurement": "system",
             "policy": "default",
-            "query": "from(bucket: \"monitoring\")\r\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n  |> filter(fn: (r) =>\r\n    r._measurement == \"system\" and\r\n    r._field == \"load5\"\r\n  )\r\n  |> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n  |> filter(fn: (r) =>\r\n    r._measurement == \"system\" and\r\n    r._field == \"load5\"\r\n  )\r\n  |> aggregateWindow(every: 1m, fn: mean)",
             "refId": "A",
             "resultFormat": "time_series",
             "select": [
@@ -372,7 +372,7 @@
             ],
             "measurement": "processes",
             "policy": "default",
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"zombies\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"zombies\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "A",
             "resultFormat": "time_series",
             "select": [
@@ -491,7 +491,7 @@
             ],
             "measurement": "processes",
             "policy": "default",
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"running\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"running\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "A",
             "resultFormat": "time_series",
             "select": [
@@ -610,7 +610,7 @@
             ],
             "measurement": "processes",
             "policy": "default",
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"total_threads\"\r\n)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"total_threads\"\r\n)",
             "refId": "A",
             "resultFormat": "time_series",
             "select": [
@@ -730,7 +730,7 @@
             ],
             "measurement": "cpu",
             "policy": "default",
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"blocked\"\r\n)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"blocked\"\r\n)",
             "refId": "A",
             "resultFormat": "time_series",
             "select": [
@@ -862,7 +862,7 @@
             ],
             "measurement": "mem",
             "policy": "default",
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"dead\"\r\n)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"dead\"\r\n)",
             "refId": "A",
             "resultFormat": "time_series",
             "select": [
@@ -983,7 +983,7 @@
             ],
             "measurement": "swap",
             "policy": "default",
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"idle\"\r\n)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"idle\"\r\n)",
             "refId": "A",
             "resultFormat": "time_series",
             "select": [
@@ -1104,7 +1104,7 @@
             ],
             "measurement": "disk",
             "policy": "default",
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"paging\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"paging\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "A",
             "resultFormat": "time_series",
             "select": [
@@ -1214,7 +1214,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"unknown\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"unknown\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "B"
           },
           {
@@ -1288,2655 +1288,9 @@
           "x": 0,
           "y": 5
         },
-        "id": 62045,
-        "panels": [],
-        "title": "System Container",
-        "type": "row"
-      },
-      {
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "never",
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "links": [],
-            "mappings": [],
-            "min": 0,
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            },
-            "unit": "hertz"
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 6
-        },
-        "id": 54694,
-        "interval": "$inter",
-        "links": [],
-        "options": {
-          "legend": {
-            "calcs": [
-              "mean",
-              "lastNotNull",
-              "max",
-              "min"
-            ],
-            "displayMode": "table",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "mode": "multi",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "v1.0",
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"cpu_usage_core_nanoseconds\" //and\r\n  //r.host == \"${host}\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "title": "cpu_usage_core",
-        "type": "timeseries"
-      },
-      {
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "drawStyle": "line",
-              "fillOpacity": 10,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "never",
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "links": [],
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            },
-            "unit": "hertz"
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 12,
-          "y": 6
-        },
-        "id": 28239,
-        "interval": "$inter",
-        "links": [],
-        "options": {
-          "legend": {
-            "calcs": [
-              "mean",
-              "lastNotNull",
-              "max",
-              "min"
-            ],
-            "displayMode": "table",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "mode": "single",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "8.3.5",
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"cpu_usage_nanocores\" //and\r\n  //r.host == \"${host}\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "A"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "cpu_percentageBusy",
-            "policy": "default",
-            "query": "SELECT mean(usage_user) as \"user\", mean(usage_system) as \"system\", mean(usage_softirq) as \"softirq\", mean(usage_steal) as \"steal\", mean(usage_nice) as \"nice\", mean(usage_irq) as \"irq\", mean(usage_iowait) as \"iowait\", mean(usage_guest) as \"guest\", mean(usage_guest_nice) as \"guest_nice\"  FROM \"cpu\" WHERE \"host\" =~ /$server$/ and cpu = 'cpu-total' AND $timeFilter GROUP BY time($interval), *",
-            "rawQuery": true,
-            "refId": "B",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "title": "CPU usage_system",
-        "type": "timeseries"
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 14
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62059,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "9.2.1",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"fs_available_bytes\" //and\r\n  //r.host == \"${host}\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Fs_available_bytes",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:168",
-            "format": "bytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:169",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "drawStyle": "line",
-              "fillOpacity": 10,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "never",
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "links": [],
-            "mappings": [],
-            "min": 0,
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            },
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 12,
-          "y": 14
-        },
-        "id": 62058,
-        "interval": "$inter",
-        "links": [],
-        "options": {
-          "legend": {
-            "calcs": [
-              "mean",
-              "lastNotNull",
-              "max",
-              "min"
-            ],
-            "displayMode": "table",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "mode": "single",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "8.3.5",
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"fs_capacity_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "A"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "cpu_percentageBusy",
-            "policy": "default",
-            "query": "SELECT mean(usage_user) as \"user\", mean(usage_system) as \"system\", mean(usage_softirq) as \"softirq\", mean(usage_steal) as \"steal\", mean(usage_nice) as \"nice\", mean(usage_irq) as \"irq\", mean(usage_iowait) as \"iowait\", mean(usage_guest) as \"guest\", mean(usage_guest_nice) as \"guest_nice\"  FROM \"cpu\" WHERE \"host\" =~ /$server$/ and cpu = 'cpu-total' AND $timeFilter GROUP BY time($interval), *",
-            "rawQuery": true,
-            "refId": "B",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "title": "Fs_capacity_bytes",
-        "type": "timeseries"
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 22
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62060,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "9.2.1",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"fs_used_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Fs_used_bytes",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:227",
-            "format": "bytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:228",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 12,
-          "y": 22
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62062,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "9.2.1",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"fs_used_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Fs_used_bytes",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:227",
-            "format": "bytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:228",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 30
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62061,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "9.2.1",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"fs_used_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Fs_used_bytes",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:227",
-            "format": "bytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:228",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "drawStyle": "line",
-              "fillOpacity": 10,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "never",
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "links": [],
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green"
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            },
-            "unit": "decmbytes"
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 12,
-          "y": 30
-        },
-        "id": 61852,
-        "links": [],
-        "options": {
-          "legend": {
-            "calcs": [
-              "mean",
-              "lastNotNull",
-              "max"
-            ],
-            "displayMode": "table",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "mode": "single",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "8.3.5",
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"memory_major_page_faults\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "A"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "groupBy": [
-              {
-                "params": [
-                  "$interval"
-                ],
-                "type": "time"
-              },
-              {
-                "params": [
-                  "null"
-                ],
-                "type": "fill"
-              }
-            ],
-            "hide": true,
-            "measurement": "processes",
-            "policy": "default",
-            "query": "SELECT mean(running) as running, mean(blocked) as blocked, mean(sleeping) as sleeping, mean(stopped) as stopped, mean(zombies) as zombies, mean(paging) as paging, mean(unknown) as unknown FROM \"processes\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), host ORDER BY asc",
-            "rawQuery": true,
-            "refId": "B",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "blocked"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": [
-              {
-                "key": "host",
-                "operator": "=~",
-                "value": "/^$server$/"
-              }
-            ]
-          }
-        ],
-        "title": "Memory_major_page_faults",
-        "type": "timeseries"
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 38
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62063,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "9.2.1",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"memory_available_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Memory_available_bytes",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:227",
-            "format": "bytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:228",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 12,
-          "y": 38
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62064,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "9.2.1",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"memory_rss_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Memory_rss_bytes",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:227",
-            "format": "bytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:228",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 46
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62065,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "9.2.1",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"memory_usage_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Memory_usage_bytes",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:227",
-            "format": "bytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:228",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "decbytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 12,
-          "y": 46
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62066,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "9.2.1",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"memory_working_set_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Memory_working_set_bytes",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:227",
-            "format": "decbytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:228",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 54
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62067,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "9.2.1",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"network_rx_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Network_rx_bytes",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:227",
-            "format": "bytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:228",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 12,
-          "y": 54
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62068,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "9.2.1",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"network_rx_errors\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Memory_usage_bytes",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:227",
-            "format": "bytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:228",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 62
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62069,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "v1.0",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"network_tx_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Network_tx_bytes",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:227",
-            "format": "bytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:228",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 12,
-          "y": 62
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62070,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "v1.0",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"network_tx_errors\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Network_tx_errors",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:227",
-            "format": "bytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:228",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 70
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62071,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "v1.0",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"runtime_image_fs_available_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Runtime_image_fs_available_bytes",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:227",
-            "format": "bytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:228",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "editable": true,
-        "error": false,
-        "fieldConfig": {
-          "defaults": {
-            "links": [],
-            "unit": "bytes"
-          },
-          "overrides": []
-        },
-        "fill": 0,
-        "fillGradient": 0,
-        "grid": {},
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 12,
-          "y": 70
-        },
-        "height": "350",
-        "hiddenSeries": false,
-        "id": 62072,
-        "interval": "$inter",
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
-        "percentage": false,
-        "pluginVersion": "v1.0",
-        "pointradius": 5,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"runtime_image_fs_capacity_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
-            "refId": "B"
-          },
-          {
-            "alias": "$tag_host: $col",
-            "datasource": {
-              "type": "influxdb",
-              "uid": "eDgO17vVk"
-            },
-            "dsType": "influxdb",
-            "function": "mean",
-            "groupBy": [
-              {
-                "interval": "auto",
-                "params": [
-                  "auto"
-                ],
-                "type": "time"
-              },
-              {
-                "key": "host",
-                "params": [
-                  "tag"
-                ],
-                "type": "tag"
-              }
-            ],
-            "hide": true,
-            "measurement": "system_load1",
-            "policy": "default",
-            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
-            "rawQuery": true,
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
-          }
-        ],
-        "thresholds": [],
-        "timeRegions": [],
-        "title": "Runtime_image_fs_capacity_bytes",
-        "tooltip": {
-          "msResolution": false,
-          "shared": true,
-          "sort": 0,
-          "value_type": "cumulative"
-        },
-        "type": "graph",
-        "xaxis": {
-          "mode": "time",
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "$$hashKey": "object:227",
-            "format": "bytes",
-            "logBase": 1,
-            "min": 0,
-            "show": true
-          },
-          {
-            "$$hashKey": "object:228",
-            "format": "short",
-            "logBase": 1,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false
-        }
-      },
-      {
-        "collapsed": false,
-        "datasource": {
-          "type": "influxdb",
-          "uid": "eDgO17vVk"
-        },
-        "gridPos": {
-          "h": 1,
-          "w": 24,
-          "x": 0,
-          "y": 78
-        },
         "id": 62046,
         "panels": [],
-        "title": "Pod Container",
+        "title": "Pod ",
         "type": "row"
       },
       {
@@ -3964,7 +1318,7 @@
           "h": 10,
           "w": 24,
           "x": 0,
-          "y": 79
+          "y": 6
         },
         "height": "400",
         "hiddenSeries": false,
@@ -3990,7 +1344,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -4012,7 +1366,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"cpu_usage_nanocores\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"cpu_usage_nanocores\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "B"
           },
           {
@@ -4122,7 +1476,7 @@
           "h": 10,
           "w": 24,
           "x": 0,
-          "y": 89
+          "y": 16
         },
         "height": "400",
         "hiddenSeries": false,
@@ -4148,7 +1502,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -4170,7 +1524,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"cpu_usage_core_nanoseconds\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"cpu_usage_core_nanoseconds\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "B"
           },
           {
@@ -4280,7 +1634,7 @@
           "h": 10,
           "w": 24,
           "x": 0,
-          "y": 99
+          "y": 26
         },
         "height": "400",
         "hiddenSeries": false,
@@ -4306,7 +1660,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -4328,7 +1682,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"logsfs_available_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"logsfs_available_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "B"
           },
           {
@@ -4438,7 +1792,7 @@
           "h": 10,
           "w": 24,
           "x": 0,
-          "y": 109
+          "y": 36
         },
         "height": "400",
         "hiddenSeries": false,
@@ -4464,7 +1818,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -4486,7 +1840,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"memory_major_page_faults\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"memory_major_page_faults\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "B"
           },
           {
@@ -4596,7 +1950,7 @@
           "h": 10,
           "w": 24,
           "x": 0,
-          "y": 119
+          "y": 46
         },
         "height": "400",
         "hiddenSeries": false,
@@ -4622,7 +1976,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -4644,7 +1998,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"memory_page_faults\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"memory_page_faults\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "B"
           },
           {
@@ -4754,7 +2108,7 @@
           "h": 10,
           "w": 24,
           "x": 0,
-          "y": 129
+          "y": 56
         },
         "height": "400",
         "hiddenSeries": false,
@@ -4780,7 +2134,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -4802,7 +2156,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"memory_rss_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"memory_rss_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "B"
           },
           {
@@ -4912,7 +2266,7 @@
           "h": 10,
           "w": 24,
           "x": 0,
-          "y": 139
+          "y": 66
         },
         "height": "400",
         "hiddenSeries": false,
@@ -4960,7 +2314,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"memory_usage_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"memory_usage_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "B"
           },
           {
@@ -5070,7 +2424,7 @@
           "h": 10,
           "w": 24,
           "x": 0,
-          "y": 149
+          "y": 76
         },
         "height": "400",
         "hiddenSeries": false,
@@ -5118,7 +2472,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"memory_working_set_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"memory_working_set_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "B"
           },
           {
@@ -5228,7 +2582,7 @@
           "h": 10,
           "w": 24,
           "x": 0,
-          "y": 159
+          "y": 86
         },
         "height": "400",
         "hiddenSeries": false,
@@ -5276,7 +2630,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"rootfs_available_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"rootfs_available_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "B"
           },
           {
@@ -5386,7 +2740,7 @@
           "h": 10,
           "w": 24,
           "x": 0,
-          "y": 169
+          "y": 96
         },
         "height": "400",
         "hiddenSeries": false,
@@ -5434,7 +2788,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"rootfs_used_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"rootfs_used_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "B"
           },
           {
@@ -5544,7 +2898,7 @@
           "h": 10,
           "w": 24,
           "x": 0,
-          "y": 179
+          "y": 106
         },
         "height": "400",
         "hiddenSeries": false,
@@ -5592,7 +2946,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"rootfs_capacity_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_container\" and\r\n  r._field == \"rootfs_capacity_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "B"
           },
           {
@@ -5687,6 +3041,2559 @@
           "h": 1,
           "w": 24,
           "x": 0,
+          "y": 116
+        },
+        "id": 62045,
+        "panels": [],
+        "title": "System Container",
+        "type": "row"
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "links": [],
+            "mappings": [],
+            "min": 0,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "hertz"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 117
+        },
+        "id": 54694,
+        "interval": "$inter",
+        "links": [],
+        "options": {
+          "legend": {
+            "calcs": [
+              "mean",
+              "lastNotNull",
+              "max",
+              "min"
+            ],
+            "displayMode": "table",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "v1.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"cpu_usage_core_nanoseconds\" //and\r\n  //r.host == \"${host}\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          }
+        ],
+        "title": "cpu_usage_core",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "links": [],
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "hertz"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 117
+        },
+        "id": 28239,
+        "interval": "$inter",
+        "links": [],
+        "options": {
+          "legend": {
+            "calcs": [
+              "mean",
+              "lastNotNull",
+              "max",
+              "min"
+            ],
+            "displayMode": "table",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "8.3.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"cpu_usage_nanocores\" //and\r\n  //r.host == \"${host}\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "A"
+          }
+        ],
+        "title": "CPU usage_system",
+        "type": "timeseries"
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 125
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62059,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"fs_available_bytes\" //and\r\n  //r.host == \"${host}\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Fs_available_bytes",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:168",
+            "format": "bytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:169",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "links": [],
+            "mappings": [],
+            "min": 0,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 125
+        },
+        "id": 62058,
+        "interval": "$inter",
+        "links": [],
+        "options": {
+          "legend": {
+            "calcs": [
+              "mean",
+              "lastNotNull",
+              "max",
+              "min"
+            ],
+            "displayMode": "table",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "8.3.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"fs_capacity_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "A"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "cpu_percentageBusy",
+            "policy": "default",
+            "query": "SELECT mean(usage_user) as \"user\", mean(usage_system) as \"system\", mean(usage_softirq) as \"softirq\", mean(usage_steal) as \"steal\", mean(usage_nice) as \"nice\", mean(usage_irq) as \"irq\", mean(usage_iowait) as \"iowait\", mean(usage_guest) as \"guest\", mean(usage_guest_nice) as \"guest_nice\"  FROM \"cpu\" WHERE \"host\" =~ /$server$/ and cpu = 'cpu-total' AND $timeFilter GROUP BY time($interval), *",
+            "rawQuery": true,
+            "refId": "B",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "title": "Fs_capacity_bytes",
+        "type": "timeseries"
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 133
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62060,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"fs_used_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "system_load1",
+            "policy": "default",
+            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
+            "rawQuery": true,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Fs_used_bytes",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:227",
+            "format": "bytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:228",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 133
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62062,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"fs_used_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "system_load1",
+            "policy": "default",
+            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
+            "rawQuery": true,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Fs_used_bytes",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:227",
+            "format": "bytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:228",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 141
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62061,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"fs_used_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "system_load1",
+            "policy": "default",
+            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
+            "rawQuery": true,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Fs_used_bytes",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:227",
+            "format": "bytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:228",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "links": [],
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "decmbytes"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 141
+        },
+        "id": 61852,
+        "links": [],
+        "options": {
+          "legend": {
+            "calcs": [
+              "mean",
+              "lastNotNull",
+              "max"
+            ],
+            "displayMode": "table",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "8.3.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"memory_major_page_faults\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "A"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "groupBy": [
+              {
+                "params": [
+                  "$interval"
+                ],
+                "type": "time"
+              },
+              {
+                "params": [
+                  "null"
+                ],
+                "type": "fill"
+              }
+            ],
+            "hide": true,
+            "measurement": "processes",
+            "policy": "default",
+            "query": "SELECT mean(running) as running, mean(blocked) as blocked, mean(sleeping) as sleeping, mean(stopped) as stopped, mean(zombies) as zombies, mean(paging) as paging, mean(unknown) as unknown FROM \"processes\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), host ORDER BY asc",
+            "rawQuery": true,
+            "refId": "B",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "blocked"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": [
+              {
+                "key": "host",
+                "operator": "=~",
+                "value": "/^$server$/"
+              }
+            ]
+          }
+        ],
+        "title": "Memory_major_page_faults",
+        "type": "timeseries"
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 149
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62063,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"memory_available_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "system_load1",
+            "policy": "default",
+            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
+            "rawQuery": true,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Memory_available_bytes",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:227",
+            "format": "bytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:228",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 149
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62064,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"memory_rss_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "system_load1",
+            "policy": "default",
+            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
+            "rawQuery": true,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Memory_rss_bytes",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:227",
+            "format": "bytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:228",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 157
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62065,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"memory_usage_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "system_load1",
+            "policy": "default",
+            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
+            "rawQuery": true,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Memory_usage_bytes",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:227",
+            "format": "bytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:228",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "decbytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 157
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62066,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"memory_working_set_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "system_load1",
+            "policy": "default",
+            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
+            "rawQuery": true,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Memory_working_set_bytes",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:227",
+            "format": "decbytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:228",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 165
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62067,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"network_rx_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "system_load1",
+            "policy": "default",
+            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
+            "rawQuery": true,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Network_rx_bytes",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:227",
+            "format": "bytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:228",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 165
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62068,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"network_rx_errors\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "system_load1",
+            "policy": "default",
+            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
+            "rawQuery": true,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Memory_usage_bytes",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:227",
+            "format": "bytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:228",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 173
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62069,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"network_tx_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "system_load1",
+            "policy": "default",
+            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
+            "rawQuery": true,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Network_tx_bytes",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:227",
+            "format": "bytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:228",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 173
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62070,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"network_tx_errors\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "system_load1",
+            "policy": "default",
+            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
+            "rawQuery": true,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Network_tx_errors",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:227",
+            "format": "bytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:228",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 181
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62071,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"runtime_image_fs_available_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "system_load1",
+            "policy": "default",
+            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
+            "rawQuery": true,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Runtime_image_fs_available_bytes",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:227",
+            "format": "bytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:228",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "editable": true,
+        "error": false,
+        "fieldConfig": {
+          "defaults": {
+            "links": [],
+            "unit": "bytes"
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "grid": {},
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 181
+        },
+        "height": "350",
+        "hiddenSeries": false,
+        "id": 62072,
+        "interval": "$inter",
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "max": true,
+          "min": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "9.2.1",
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "hide": false,
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_node\" and\r\n  r._field == \"runtime_image_fs_capacity_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "refId": "B"
+          },
+          {
+            "alias": "$tag_host: $col",
+            "datasource": {
+              "type": "influxdb",
+              "uid": "eDgO17vVk"
+            },
+            "dsType": "influxdb",
+            "function": "mean",
+            "groupBy": [
+              {
+                "interval": "auto",
+                "params": [
+                  "auto"
+                ],
+                "type": "time"
+              },
+              {
+                "key": "host",
+                "params": [
+                  "tag"
+                ],
+                "type": "tag"
+              }
+            ],
+            "hide": true,
+            "measurement": "system_load1",
+            "policy": "default",
+            "query": "SELECT mean(load1) as short,mean(load5) as medium,mean(load15) as long FROM \"system\" WHERE host =~ /$server$/ AND $timeFilter GROUP BY time($interval), * ORDER BY asc",
+            "rawQuery": true,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "mean"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "thresholds": [],
+        "timeRegions": [],
+        "title": "Runtime_image_fs_capacity_bytes",
+        "tooltip": {
+          "msResolution": false,
+          "shared": true,
+          "sort": 0,
+          "value_type": "cumulative"
+        },
+        "type": "graph",
+        "xaxis": {
+          "mode": "time",
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "$$hashKey": "object:227",
+            "format": "bytes",
+            "logBase": 1,
+            "min": 0,
+            "show": true
+          },
+          {
+            "$$hashKey": "object:228",
+            "format": "short",
+            "logBase": 1,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false
+        }
+      },
+      {
+        "collapsed": false,
+        "datasource": {
+          "type": "influxdb",
+          "uid": "eDgO17vVk"
+        },
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
           "y": 189
         },
         "id": 62047,
@@ -5741,7 +5648,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -5756,7 +5663,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_network\" and\r\n  r._field == \"rx_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_network\" and\r\n  r._field == \"rx_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "A"
           },
           {
@@ -5890,7 +5797,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -5905,7 +5812,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_network\" and\r\n  r._field == \"tx_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_network\" and\r\n  r._field == \"tx_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "A"
           },
           {
@@ -6039,7 +5946,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -6064,7 +5971,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_network\" and\r\n  r._field == \"rx_errors\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_network\" and\r\n  r._field == \"rx_errors\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "C"
           },
           {
@@ -6175,7 +6082,7 @@
               "uid": "eDgO17vVk"
             },
             "hide": false,
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_network\" and\r\n  r._field == \"tx_errors\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_network\" and\r\n  r._field == \"tx_errors\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "D"
           }
         ],
@@ -6278,7 +6185,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -6323,7 +6230,7 @@
             "measurement": "interrupts",
             "orderByTime": "ASC",
             "policy": "default",
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_volume\" and\r\n  r._field == \"available_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_volume\" and\r\n  r._field == \"available_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "A",
             "resultFormat": "time_series",
             "select": [
@@ -6436,7 +6343,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -6481,7 +6388,7 @@
             "measurement": "interrupts",
             "orderByTime": "ASC",
             "policy": "default",
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_volume\" and\r\n  r._field == \"used_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)\r\n",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_volume\" and\r\n  r._field == \"used_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)\r\n",
             "refId": "A",
             "resultFormat": "time_series",
             "select": [
@@ -6639,7 +6546,7 @@
             "measurement": "interrupts",
             "orderByTime": "ASC",
             "policy": "default",
-            "query": "from(bucket: \"monitoring\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_volume\" and\r\n  r._field == \"capacity_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
+            "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kubernetes_pod_volume\" and\r\n  r._field == \"capacity_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
             "refId": "A",
             "resultFormat": "time_series",
             "select": [
@@ -6880,6 +6787,6 @@
     "timezone": "browser",
     "title": "Telegraf:KubernetesResources",
     "uid": "f268hsa7z",
-    "version": 7,
+    "version": 12,
     "weekStart": ""
   }
