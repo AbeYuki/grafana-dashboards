@@ -73,8 +73,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -189,8 +188,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "rgba(50, 172, 45, 0.97)",
-                  "value": null
+                  "color": "rgba(50, 172, 45, 0.97)"
                 },
                 {
                   "color": "rgba(237, 129, 40, 0.89)",
@@ -308,8 +306,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "rgba(50, 172, 45, 0.97)",
-                  "value": null
+                  "color": "rgba(50, 172, 45, 0.97)"
                 },
                 {
                   "color": "rgba(237, 129, 40, 0.89)",
@@ -427,8 +424,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "rgba(50, 172, 45, 0.97)",
-                  "value": null
+                  "color": "rgba(50, 172, 45, 0.97)"
                 },
                 {
                   "color": "rgba(237, 129, 40, 0.89)",
@@ -546,8 +542,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "rgba(50, 172, 45, 0.97)",
-                  "value": null
+                  "color": "rgba(50, 172, 45, 0.97)"
                 },
                 {
                   "color": "rgba(237, 129, 40, 0.89)",
@@ -666,8 +661,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "rgba(50, 172, 45, 0.97)",
-                  "value": null
+                  "color": "rgba(50, 172, 45, 0.97)"
                 },
                 {
                   "color": "rgba(237, 129, 40, 0.89)",
@@ -798,8 +792,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "rgba(50, 172, 45, 0.97)",
-                  "value": null
+                  "color": "rgba(50, 172, 45, 0.97)"
                 },
                 {
                   "color": "rgba(237, 129, 40, 0.89)",
@@ -919,8 +912,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "rgba(50, 172, 45, 0.97)",
-                  "value": null
+                  "color": "rgba(50, 172, 45, 0.97)"
                 },
                 {
                   "color": "rgba(237, 129, 40, 0.89)",
@@ -1040,8 +1032,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "rgba(50, 172, 45, 0.97)",
-                  "value": null
+                  "color": "rgba(50, 172, 45, 0.97)"
                 },
                 {
                   "color": "rgba(237, 129, 40, 0.89)",
@@ -1166,8 +1157,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "rgba(245, 54, 54, 0.9)",
-                  "value": null
+                  "color": "rgba(245, 54, 54, 0.9)"
                 },
                 {
                   "color": "rgba(237, 129, 40, 0.89)",
@@ -1340,8 +1330,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -1349,7 +1338,7 @@
                 }
               ]
             },
-            "unit": "decbits"
+            "unit": "hertz"
           },
           "overrides": []
         },
@@ -1487,8 +1476,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -1496,7 +1484,7 @@
                 }
               ]
             },
-            "unit": "decbits"
+            "unit": "hertz"
           },
           "overrides": []
         },
@@ -1737,8 +1725,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -2331,8 +2318,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -2482,7 +2468,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -2631,7 +2617,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -2780,7 +2766,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -2929,7 +2915,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -3078,7 +3064,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -3227,7 +3213,7 @@
           "alertThreshold": true
         },
         "percentage": false,
-        "pluginVersion": "v1.0",
+        "pluginVersion": "9.2.1",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -6714,7 +6700,7 @@
         {
           "allFormat": "glob",
           "current": {
-            "selected": true,
+            "selected": false,
             "text": "InfluxDB",
             "value": "InfluxDB"
           },
@@ -6826,7 +6812,7 @@
         },
         {
           "current": {
-            "selected": true,
+            "selected": false,
             "text": "monitoring",
             "value": "monitoring"
           },
@@ -6881,6 +6867,6 @@
     "timezone": "browser",
     "title": "Telegraf:KubernetesResources",
     "uid": "f268hsa7z",
-    "version": 4,
+    "version": 7,
     "weekStart": ""
   }
