@@ -1,2 +1,3 @@
 # grafana-dashboards
- dashboard.json uploaded to grafana.com
+
+https://grafana.com/orgs/aim4highergg/dashboards
