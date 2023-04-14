@@ -34,7 +34,7 @@
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "gridPos": {
           "h": 1,
@@ -50,7 +50,7 @@
       {
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -115,7 +115,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -166,7 +166,7 @@
       {
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -234,7 +234,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -285,7 +285,7 @@
       {
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -353,7 +353,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -404,7 +404,7 @@
       {
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -472,7 +472,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -523,7 +523,7 @@
       {
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -591,7 +591,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -642,7 +642,7 @@
       {
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -711,7 +711,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -774,7 +774,7 @@
       {
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -843,7 +843,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -894,7 +894,7 @@
       {
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -964,7 +964,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -1015,7 +1015,7 @@
       {
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -1085,7 +1085,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -1142,7 +1142,7 @@
       {
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -1211,7 +1211,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"processes\" and\r\n  r._field == \"unknown\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -1220,7 +1220,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -1280,7 +1280,7 @@
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "gridPos": {
           "h": 1,
@@ -1300,7 +1300,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -1353,7 +1353,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n  |> filter(fn: (r) =>\r\n    r._measurement == \"system\" and\r\n    r._field == \"load1\"\r\n  )\r\n  |> aggregateWindow(every: 1m, fn: mean)",
@@ -1397,7 +1397,7 @@
       {
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -1486,7 +1486,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"cpu\" and\r\n  r._field == \"usage_system\" and\r\n  r.cpu == \"cpu-total\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -1496,7 +1496,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -1550,7 +1550,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -1603,7 +1603,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n  |> filter(fn: (r) =>\r\n    r._measurement == \"system\" and\r\n    r._field == \"load5\"\r\n  )\r\n  |> aggregateWindow(every: 1m, fn: mean)",
@@ -1613,7 +1613,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -1694,7 +1694,7 @@
       {
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -1783,7 +1783,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"cpu\" and\r\n  r._field == \"usage_user\" and\r\n  r.cpu == \"cpu-total\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -1793,7 +1793,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -1847,7 +1847,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -1900,7 +1900,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n  |> filter(fn: (r) =>\r\n    r._measurement == \"system\" and\r\n    r._field == \"load15\"\r\n  )\r\n  |> aggregateWindow(every: 1m, fn: mean)",
@@ -1910,7 +1910,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -1991,7 +1991,7 @@
       {
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -2073,7 +2073,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"cpu\" and\r\n  r._field == \"usage_softirq\" and\r\n  r.cpu == \"cpu-total\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -2083,7 +2083,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -2137,7 +2137,7 @@
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "gridPos": {
           "h": 1,
@@ -2157,7 +2157,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -2220,7 +2220,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"mem\" and\r\n  r._field == \"available\"\r\n)",
@@ -2230,7 +2230,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -2312,7 +2312,7 @@
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "gridPos": {
           "h": 1,
@@ -2332,7 +2332,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -2384,7 +2384,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kernel\" and\r\n  r._field == \"context_switches\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -2394,7 +2394,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -2481,7 +2481,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -2533,7 +2533,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kernel\" and\r\n  r._field == \"processes_forked\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -2543,7 +2543,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -2630,7 +2630,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -2692,7 +2692,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"kernel\" and\r\n  r._field == \"entropy_avail\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -2702,7 +2702,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -2753,7 +2753,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -2838,7 +2838,7 @@
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "gridPos": {
           "h": 1,
@@ -2858,7 +2858,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -2912,7 +2912,7 @@
             "alias": "$tag_host: $tag_irq",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -3012,7 +3012,7 @@
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "gridPos": {
           "h": 1,
@@ -3032,7 +3032,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -3092,7 +3092,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"cpu\" and\r\n  r._field == \"usage_idle\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -3102,7 +3102,7 @@
             "alias": "$tag_host: $cpu $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -3185,7 +3185,7 @@
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "gridPos": {
           "h": 1,
@@ -3205,7 +3205,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -3263,7 +3263,7 @@
             "alias": "$server: current",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -3311,7 +3311,7 @@
             "alias": "$server: maximum",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -3392,7 +3392,7 @@
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "gridPos": {
           "h": 1,
@@ -3412,7 +3412,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -3469,7 +3469,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"tcp_maxconn\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -3479,7 +3479,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "derivative",
@@ -3570,7 +3570,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -3632,7 +3632,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"tcp_estabresets\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -3642,7 +3642,7 @@
             "alias": "on close",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -3698,7 +3698,7 @@
             "alias": "on data",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -3754,7 +3754,7 @@
             "alias": "timeout",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -3810,7 +3810,7 @@
             "alias": "failed",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -3866,7 +3866,7 @@
             "alias": "linger",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -3922,7 +3922,7 @@
             "alias": "memory",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -4015,7 +4015,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "decimals": 0,
         "editable": true,
@@ -4078,7 +4078,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"tcp_passiveopens\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -4088,7 +4088,7 @@
             "alias": "estabresets",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -4138,7 +4138,7 @@
             "alias": "outrsts",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -4188,7 +4188,7 @@
             "alias": "activeopens",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -4238,7 +4238,7 @@
             "alias": "passiveopens",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -4325,7 +4325,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -4388,7 +4388,7 @@
             "alias": "failed",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -4442,7 +4442,7 @@
             "alias": "received",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -4496,7 +4496,7 @@
             "alias": "sent",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -4586,7 +4586,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -4649,7 +4649,7 @@
             "alias": "in echos",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -4704,7 +4704,7 @@
             "alias": "out echos",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -4758,7 +4758,7 @@
             "alias": "in echo responses",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -4811,7 +4811,7 @@
             "alias": "out echo responses",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -4901,7 +4901,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "decimals": 1,
         "editable": true,
@@ -4965,7 +4965,7 @@
             "alias": "in errors",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5019,7 +5019,7 @@
             "alias": "out errors",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5073,7 +5073,7 @@
             "alias": "checksum errors",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5163,7 +5163,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -5225,7 +5225,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"ip_inaddrerrors\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -5235,7 +5235,7 @@
             "alias": "in discards",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5288,7 +5288,7 @@
             "alias": "out discards",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5341,7 +5341,7 @@
             "alias": "in hdr errors",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5394,7 +5394,7 @@
             "alias": "in addr errors",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5447,7 +5447,7 @@
             "alias": "out no routes",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5500,7 +5500,7 @@
             "alias": "in unknown protocol",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5590,7 +5590,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -5653,7 +5653,7 @@
             "alias": "in discards",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5706,7 +5706,7 @@
             "alias": "out discards",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5759,7 +5759,7 @@
             "alias": "in hdr errors",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5812,7 +5812,7 @@
             "alias": "in addr errors",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5865,7 +5865,7 @@
             "alias": "out no routes",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5918,7 +5918,7 @@
             "alias": "in unknown protocol",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -5970,7 +5970,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"ip_inhdrerrors\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -6014,7 +6014,7 @@
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "gridPos": {
           "h": 1,
@@ -6034,7 +6034,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -6092,7 +6092,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"udp_outdatagrams\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -6102,7 +6102,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "derivative",
@@ -6156,7 +6156,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "derivative",
@@ -6247,7 +6247,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "decimals": 2,
         "editable": true,
@@ -6309,7 +6309,7 @@
             "alias": "Send buffer errors",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -6363,7 +6363,7 @@
             "alias": "Receive buffer errors",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -6454,7 +6454,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "decimals": 2,
         "editable": true,
@@ -6518,7 +6518,7 @@
             "alias": "checksum errors",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -6572,7 +6572,7 @@
             "alias": "in errors",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -6625,7 +6625,7 @@
             "alias": "no ports",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "groupBy": [
@@ -6712,7 +6712,7 @@
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "gridPos": {
           "h": 1,
@@ -6733,7 +6733,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -6792,7 +6792,7 @@
             "alias": "$tag_host: $tag_interface: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "derivative",
@@ -6846,7 +6846,7 @@
             "alias": "$tag_host: $tag_interface: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "derivative",
@@ -6899,7 +6899,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"bytes_recv\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -6908,7 +6908,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"bytes_sent\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -6955,7 +6955,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -7014,7 +7014,7 @@
             "alias": "$tag_host: $tag_interface: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "derivative",
@@ -7068,7 +7068,7 @@
             "alias": "$tag_host: $tag_interface: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "derivative",
@@ -7121,7 +7121,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"packets_recv\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -7130,7 +7130,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"packets_sent\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -7178,7 +7178,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "decimals": 1,
         "editable": true,
@@ -7232,7 +7232,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"drop_in\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -7242,7 +7242,7 @@
             "alias": "$tag_host: $tag_interface: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "derivative",
@@ -7296,7 +7296,7 @@
             "alias": "$tag_host: $tag_interface: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "derivative",
@@ -7349,7 +7349,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"drop_out\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -7398,7 +7398,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -7452,7 +7452,7 @@
             "alias": "$tag_host: $tag_interface: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "derivative",
@@ -7506,7 +7506,7 @@
             "alias": "$tag_host: $tag_interface: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "derivative",
@@ -7559,7 +7559,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"err_in\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -7568,7 +7568,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"net\" and\r\n  r._field == \"err_out\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -7614,7 +7614,7 @@
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "gridPos": {
           "h": 1,
@@ -7634,7 +7634,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -7694,7 +7694,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -7740,7 +7740,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"swap\" and\r\n  r._field == \"in\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -7749,7 +7749,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"swap\" and\r\n  r._field == \"out\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -7796,7 +7796,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -7857,7 +7857,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -7904,7 +7904,7 @@
             "alias": "$tag_host: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -7950,7 +7950,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"swap\" and\r\n  r._field == \"used\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -7959,7 +7959,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"swap\" and\r\n  r._field == \"total\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -8004,7 +8004,7 @@
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "gridPos": {
           "h": 1,
@@ -8025,7 +8025,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -8088,7 +8088,7 @@
             "alias": "$tag_host: $tag_name: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -8142,7 +8142,7 @@
             "alias": "$tag_host: $tag_name: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -8195,7 +8195,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"diskio\" and\r\n  r._field == \"reads\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -8204,7 +8204,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": true,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"diskio\" and\r\n  r._field == \"writes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -8251,7 +8251,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -8314,7 +8314,7 @@
             "alias": "$tag_host: $tag_name: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -8368,7 +8368,7 @@
             "alias": "$tag_host: $tag_name: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -8421,7 +8421,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": true,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"diskio\" and\r\n  r._field == \"reads\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -8430,7 +8430,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"diskio\" and\r\n  r._field == \"writes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -8477,7 +8477,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -8540,7 +8540,7 @@
             "alias": "$tag_host: $tag_name: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -8594,7 +8594,7 @@
             "alias": "$tag_host: $tag_name: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -8647,7 +8647,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": true,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"diskio\" and\r\n  r._field == \"write_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -8656,7 +8656,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"diskio\" and\r\n  r._field == \"read_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -8703,7 +8703,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -8766,7 +8766,7 @@
             "alias": "$tag_host: $tag_name: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -8820,7 +8820,7 @@
             "alias": "$tag_host: $tag_name: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -8873,7 +8873,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"diskio\" and\r\n  r._field == \"write_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -8882,7 +8882,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"diskio\" and\r\n  r._field == \"read_bytes\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -8929,7 +8929,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -8992,7 +8992,7 @@
             "alias": "$tag_host: $tag_name: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -9046,7 +9046,7 @@
             "alias": "$tag_host: $tag_name: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -9099,7 +9099,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"diskio\" and\r\n  r._field == \"read_time\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -9108,7 +9108,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"diskio\" and\r\n  r._field == \"write_time\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -9155,7 +9155,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -9218,7 +9218,7 @@
             "alias": "$tag_host: $tag_name: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -9272,7 +9272,7 @@
             "alias": "$tag_host: $tag_name: $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -9325,7 +9325,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": true,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"diskio\" and\r\n  r._field == \"read_time\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -9334,7 +9334,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"diskio\" and\r\n  r._field == \"write_time\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -9378,7 +9378,7 @@
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "gridPos": {
           "h": 1,
@@ -9399,7 +9399,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -9462,7 +9462,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"disk\" and\r\n  r._field == \"free\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -9510,7 +9510,7 @@
         "dashes": false,
         "datasource": {
           "type": "influxdb",
-          "uid": "eDgO17vVk"
+          "uid": "cp6pFofVz"
         },
         "editable": true,
         "error": false,
@@ -9580,7 +9580,7 @@
             "alias": "$tag_host: mountpoint $tag_path - $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -9634,7 +9634,7 @@
             "alias": "$tag_host: mountpoint $tag_path - $col",
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "dsType": "influxdb",
             "function": "mean",
@@ -9687,7 +9687,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "eDgO17vVk"
+              "uid": "cp6pFofVz"
             },
             "hide": false,
             "query": "from(bucket: \"${buckets}\")\r\n|> range(start: v.timeRangeStart, stop:v.timeRangeStop)\r\n|> filter(fn: (r) =>\r\n  r._measurement == \"disk\" and\r\n  r._field == \"inodes_free\"\r\n)\r\n|> aggregateWindow(every: 1m, fn: mean)",
@@ -9831,7 +9831,7 @@
           },
           "datasource": {
             "type": "influxdb",
-            "uid": "eDgO17vVk"
+            "uid": "cp6pFofVz"
           },
           "definition": "import \"influxdata/influxdb/schema\"\r\nschema.tagValues(bucket: \"${buckets}\", tag: \"host\")",
           "hide": 0,
@@ -9854,7 +9854,7 @@
           },
           "datasource": {
             "type": "influxdb",
-            "uid": "eDgO17vVk"
+            "uid": "cp6pFofVz"
           },
           "definition": "buckets()",
           "hide": 0,
@@ -9903,7 +9903,7 @@
     },
     "timezone": "browser",
     "title": "Telegraf:SystemResources",
-    "uid": "58ByGEa7k",
+    "uid": "",
     "version": 4,
     "weekStart": ""
   }

@@ -33,7 +33,7 @@
       {
         "datasource": {
           "type": "loki",
-          "uid": "Vn8F1nDVk"
+          "uid": "dNTedTBVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -111,7 +111,7 @@
           {
             "datasource": {
               "type": "loki",
-              "uid": "Vn8F1nDVk"
+              "uid": "dNTedTBVz"
             },
             "expr": "count_over_time( {namespace=\"$namespace\"} |~ \"info\" [5m])",
             "hide": false,
@@ -126,7 +126,7 @@
       {
         "datasource": {
           "type": "loki",
-          "uid": "Vn8F1nDVk"
+          "uid": "dNTedTBVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -204,7 +204,7 @@
           {
             "datasource": {
               "type": "loki",
-              "uid": "Vn8F1nDVk"
+              "uid": "dNTedTBVz"
             },
             "expr": "count_over_time( {namespace=\"$namespace\"} |~ \"warning\" [5m])",
             "hide": false,
@@ -219,7 +219,7 @@
       {
         "datasource": {
           "type": "loki",
-          "uid": "Vn8F1nDVk"
+          "uid": "dNTedTBVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -297,7 +297,7 @@
           {
             "datasource": {
               "type": "loki",
-              "uid": "Vn8F1nDVk"
+              "uid": "dNTedTBVz"
             },
             "expr": "count_over_time( {namespace=\"$namespace\"} |~ \"alert\" [5m])",
             "hide": false,
@@ -312,7 +312,7 @@
       {
         "datasource": {
           "type": "loki",
-          "uid": "Vn8F1nDVk"
+          "uid": "dNTedTBVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -390,7 +390,7 @@
           {
             "datasource": {
               "type": "loki",
-              "uid": "Vn8F1nDVk"
+              "uid": "dNTedTBVz"
             },
             "expr": "count_over_time( {namespace=\"$namespace\"} |~ \"error\" [5m])",
             "hide": false,
@@ -405,7 +405,7 @@
       {
         "datasource": {
           "type": "loki",
-          "uid": "Vn8F1nDVk"
+          "uid": "dNTedTBVz"
         },
         "fieldConfig": {
           "defaults": {
@@ -483,7 +483,7 @@
           {
             "datasource": {
               "type": "loki",
-              "uid": "Vn8F1nDVk"
+              "uid": "dNTedTBVz"
             },
             "expr": "count_over_time( {namespace=\"$namespace\"} |~ \"crit\" [5m])",
             "hide": false,
@@ -498,7 +498,7 @@
       {
         "datasource": {
           "type": "loki",
-          "uid": "Vn8F1nDVk"
+          "uid": "dNTedTBVz"
         },
         "gridPos": {
           "h": 6,
@@ -521,7 +521,7 @@
           {
             "datasource": {
               "type": "loki",
-              "uid": "Vn8F1nDVk"
+              "uid": "dNTedTBVz"
             },
             "expr": "{namespace=\"$namespace\"} |~ \"info\"",
             "refId": "A"
@@ -533,7 +533,7 @@
       {
         "datasource": {
           "type": "loki",
-          "uid": "Vn8F1nDVk"
+          "uid": "dNTedTBVz"
         },
         "gridPos": {
           "h": 6,
@@ -556,7 +556,7 @@
           {
             "datasource": {
               "type": "loki",
-              "uid": "Vn8F1nDVk"
+              "uid": "dNTedTBVz"
             },
             "expr": "{namespace=\"$namespace\"} |~ \"warning\"",
             "refId": "A"
@@ -568,7 +568,7 @@
       {
         "datasource": {
           "type": "loki",
-          "uid": "Vn8F1nDVk"
+          "uid": "dNTedTBVz"
         },
         "gridPos": {
           "h": 6,
@@ -591,7 +591,7 @@
           {
             "datasource": {
               "type": "loki",
-              "uid": "Vn8F1nDVk"
+              "uid": "dNTedTBVz"
             },
             "expr": "{namespace=\"$namespace\"} |~ \"alert\"",
             "refId": "A"
@@ -603,7 +603,7 @@
       {
         "datasource": {
           "type": "loki",
-          "uid": "Vn8F1nDVk"
+          "uid": "dNTedTBVz"
         },
         "gridPos": {
           "h": 6,
@@ -626,7 +626,7 @@
           {
             "datasource": {
               "type": "loki",
-              "uid": "Vn8F1nDVk"
+              "uid": "dNTedTBVz"
             },
             "expr": "{namespace=\"$namespace\"} |~ \"error\"",
             "refId": "A"
@@ -638,7 +638,7 @@
       {
         "datasource": {
           "type": "loki",
-          "uid": "Vn8F1nDVk"
+          "uid": "dNTedTBVz"
         },
         "gridPos": {
           "h": 6,
@@ -661,7 +661,7 @@
           {
             "datasource": {
               "type": "loki",
-              "uid": "Vn8F1nDVk"
+              "uid": "dNTedTBVz"
             },
             "expr": "{namespace=\"$namespace\"} |~ \"crit\"",
             "refId": "A"
@@ -673,7 +673,7 @@
       {
         "datasource": {
           "type": "loki",
-          "uid": "Vn8F1nDVk"
+          "uid": "dNTedTBVz"
         },
         "gridPos": {
           "h": 15,
@@ -696,7 +696,7 @@
           {
             "datasource": {
               "type": "loki",
-              "uid": "Vn8F1nDVk"
+              "uid": "dNTedTBVz"
             },
             "expr": "{namespace=\"$namespace\"}",
             "refId": "A"
@@ -720,7 +720,7 @@
           },
           "datasource": {
             "type": "loki",
-            "uid": "Vn8F1nDVk"
+            "uid": "dNTedTBVz"
           },
           "definition": "label_values(namespace)",
           "hide": 0,
@@ -744,7 +744,7 @@
     "timepicker": {},
     "timezone": "",
     "title": "Loki:NamespaceLogs",
-    "uid": "K8jJysL7k",
+    "uid": "",
     "version": 2,
     "weekStart": ""
   }
